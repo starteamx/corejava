@@ -41,7 +41,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: java-docs
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --no-frozen-lockfile
 
       - name: Build VuePress site
         working-directory: java-docs
