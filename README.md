@@ -248,10 +248,11 @@ git push origin main
    - Branch: `gh-pages` / `root`
    - Folder: `/ (root)`
 
-2. 如果仓库不在根路径（如 `username/repo-name`），需要在 `java-docs/src/.vuepress/config.ts` 中设置：
+2. Base 路径已配置为 `/corejava/`（在 `java-docs/src/.vuepress/config.ts` 中）：
    ```typescript
-   base: "/repo-name/",
+   base: "/corejava/",
    ```
+   如果仓库名变更，需要同步修改此配置。
 
 ---
 
@@ -303,19 +304,19 @@ MIT License
 
 ### 默认语言
 
-- **默认语言**：中文（`/zh/`）
-- **根路径重定向**：访问 `/` 会自动重定向到 `/zh/`
+- **默认语言**：中文（`/corejava/zh/`）
+- **根路径重定向**：访问 `/corejava/` 会自动重定向到 `/corejava/zh/`
 
 ### 语言切换
 
-- 中文：`/zh/`
-- 英文：`/en/`
+- 中文：`/corejava/zh/`
+- 英文：`/corejava/en/`
 - 导航栏提供语言切换链接
 
 ### 目录结构对应
 
-- `/zh/` → `java-docs/src/zh/`
-- `/en/` → `java-docs/src/en/`
+- `/corejava/zh/` → `java-docs/src/zh/`
+- `/corejava/en/` → `java-docs/src/en/`
 - 每个语言路径下的侧边栏会根据目录结构自动生成
 
 ---

@@ -4,47 +4,34 @@ import { enNavbar, zhNavbar } from "./navbar/index.js";
 import { enSidebar, zhSidebar } from "./sidebar/index.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://starteamx.github.io",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "Core Java Docs",
+    url: "https://github.com/starteamx/corejava",
   },
 
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
 
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  repo: "starteamx/corejava",
 
   docsDir: "src",
 
+  // 使用 structure 模式，自动根据目录结构生成侧边栏
+  sidebar: "structure",
+
   locales: {
-    "/": {
-      // navbar
-      navbar: enNavbar,
-
-      // sidebar
-      sidebar: enSidebar,
-
-      footer: "Default footer",
-
-      displayFooter: true,
-
-      metaLocales: {
-        editLink: "Edit this page on GitHub",
-      },
-    },
-
     /**
-     * Chinese locale config
+     * Chinese locale config (默认语言)
      */
     "/zh/": {
       // navbar
       navbar: zhNavbar,
 
-      // sidebar
-      sidebar: zhSidebar,
+      // sidebar: "structure" 会自动生成，如果需要自定义可以覆盖
+      // sidebar: zhSidebar,
 
-      footer: "默认页脚",
+      footer: "Core Java 文档 | MIT Licensed",
 
       displayFooter: true,
 
@@ -53,11 +40,30 @@ export default hopeTheme({
         editLink: "在 GitHub 上编辑此页",
       },
     },
+
+    /**
+     * English locale config
+     */
+    "/en/": {
+      // navbar
+      navbar: enNavbar,
+
+      // sidebar: "structure" 会自动生成，如果需要自定义可以覆盖
+      // sidebar: enSidebar,
+
+      footer: "Core Java Documentation | MIT Licensed",
+
+      displayFooter: true,
+
+      metaLocales: {
+        editLink: "Edit this page on GitHub",
+      },
+    },
   },
 
   encrypt: {
     config: {
-      "/demo/encrypt.html": {
+      "/en/demo/encrypt.html": {
         hint: "Password: 1234",
         password: "1234",
       },

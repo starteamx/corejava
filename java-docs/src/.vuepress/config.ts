@@ -3,22 +3,38 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  // Base 路径：与 GitHub 仓库名一致
+  base: "/corejava/",
+
+  lang: "zh-CN", // 默认语言
 
   locales: {
-    "/": {
-      lang: "en-US",
-      title: "Docs Demo",
-      description: "A docs demo for vuepress-theme-hope",
-    },
     "/zh/": {
       lang: "zh-CN",
-      title: "文档演示",
-      description: "vuepress-theme-hope 的文档演示",
+      title: "Core Java 文档",
+      description: "Core Java 中文文档",
+    },
+    "/en/": {
+      lang: "en-US",
+      title: "Core Java Documentation",
+      description: "Core Java English Documentation",
     },
   },
 
   theme,
+
+  // 根路径重定向到中文
+  head: [
+    [
+      "script",
+      {},
+      `
+      if (location.pathname === '/corejava/' || location.pathname === '/corejava/index.html') {
+        location.replace('/corejava/zh/');
+      }
+    `,
+    ],
+  ],
 
   // Enable it with pwa
   // shouldPrefetch: false,
