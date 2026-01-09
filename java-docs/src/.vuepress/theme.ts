@@ -22,6 +22,24 @@ export default hopeTheme({
 
   locales: {
     /**
+     * Root locale config (默认语言，fallback)
+     */
+    "/": {
+      // navbar
+      navbar: zhNavbar,
+
+      footer: "Core Java 文档 | MIT Licensed",
+
+      displayFooter: true,
+
+      // page meta
+      metaLocales: {
+        editLink: "在 GitHub 上编辑此页",
+        skipToContent: "跳至主要内容",
+      },
+    },
+
+    /**
      * Chinese locale config (默认语言)
      */
     "/zh/": {
@@ -38,6 +56,7 @@ export default hopeTheme({
       // page meta
       metaLocales: {
         editLink: "在 GitHub 上编辑此页",
+        skipToContent: "跳至主要内容",
       },
     },
 
@@ -57,6 +76,7 @@ export default hopeTheme({
 
       metaLocales: {
         editLink: "Edit this page on GitHub",
+        skipToContent: "Skip to content",
       },
     },
   },

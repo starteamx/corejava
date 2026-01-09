@@ -30,12 +30,12 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10.12.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.19.0
+          node-version: 25.2.1
           cache: 'pnpm'
           cache-dependency-path: java-docs/pnpm-lock.yaml
 

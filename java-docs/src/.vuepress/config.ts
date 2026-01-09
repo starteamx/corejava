@@ -9,6 +9,11 @@ export default defineUserConfig({
   lang: "zh-CN", // 默认语言
 
   locales: {
+    "/": {
+      lang: "zh-CN",
+      title: "Core Java 文档",
+      description: "Core Java 中文文档",
+    },
     "/zh/": {
       lang: "zh-CN",
       title: "Core Java 文档",
