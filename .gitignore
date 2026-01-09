@@ -1,0 +1,68 @@
+# ============================================
+# Node.js / npm / pnpm
+# ============================================
+java-docs/node_modules/
+java-docs/.pnpm-store/
+java-docs/.pnpm-debug.log*
+
+# ============================================
+# VuePress 构建产物和缓存
+# ============================================
+java-docs/src/.vuepress/dist/
+java-docs/src/.vuepress/.cache/
+java-docs/src/.vuepress/.temp/
+
+# ============================================
+# 系统文件
+# ============================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ============================================
+# IDE 和编辑器
+# ============================================
+# Cursor IDE
+.cursor/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim
+*.swp
+*.swo
+*~
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# ============================================
+# 日志和临时文件
+# ============================================
+*.log
+*.tmp
+*.temp
+.env.local
+.env.*.local
+
+# ============================================
+# 其他
+# ============================================
+# 临时文件
+*.bak
+*.backup
+*.old
